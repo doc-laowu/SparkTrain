@@ -1,0 +1,6 @@
+project/
+*.idea/
+target/
+*.log
+META-INF/*
+*.imi
