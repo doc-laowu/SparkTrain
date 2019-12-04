@@ -12,7 +12,7 @@ object DataSource {
     import spark.implicits._
 
     //直接从文件读取数据进行显示
-    val sqlDF = spark.sql("SELECT * FROM parquet.`resources/users.parquet`").show()
+    val sqlDF = spark.sql("SELECT * FROM parquet.`src/main/resources/users.parquet`").show()
 
     //创建一个DaSet[String]的里面的一列存储了一个json的对象
     val otherPeopleDataset = spark.createDataset(

@@ -3,11 +3,9 @@ package DeltaLake
 import java.sql.Timestamp
 
 import Util.TimeUtil
-import org.apache.spark.api.java.function.FlatMapFunction
-import org.apache.spark.sql.{Dataset, Encoders, Row, SparkSession}
+import org.apache.spark.sql.{Dataset, Row, SparkSession}
 
 import scala.collection.mutable.ListBuffer
-import scala.collection.parallel.mutable
 ;
 
 /**
@@ -62,7 +60,10 @@ object WriteStream {
     val query = windowedCounts
       .writeStream
       .format("delta")
+      // 默认情况下为append模式 也可以为complete模式
+      .outputMode("append")
       .option("checkpointLocation", "/tmp/checkpoint")
+      // 当文件中写入的delta表中字段比当前要写入的字段少时，需要开启schema合并
       .option("mergeSchema", "true")
       .start("/deltalake/delta-table")
 
