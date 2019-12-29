@@ -17,9 +17,9 @@ import org.apache.spark.util.LongAccumulator
 object TimingUpdateDim {
 
   def main(args: Array[String])={
-    val conf = new SparkConf().setAppName("TimingUpdateDim").setMaster("local[2]")
+    val conf = new SparkConf().setAppName("TimingUpdateDim").setMaster("local[*]")
     val ssc = new StreamingContext(conf, Seconds(5))
-    ssc.sparkContext.setLogLevel("error")
+//    ssc.sparkContext.setLogLevel("error")
     val lines = ssc.socketTextStream("192.168.1.171", 9999)
     // Split each line into words
     lines.foreachRDD(rdd=>{
@@ -58,8 +58,9 @@ object DimTable {
   }
 
   def update(sc: SparkContext, blocking: Boolean = false): Unit = {
-    if (instance != null)
+    if (instance != null){
       instance.unpersist(blocking)
+    }
     println("=====begin update=========")
     val dimMapTmp = sc.parallelize(Array("3", "4", "5")).cache().collect()
     instance = sc.broadcast(dimMapTmp)
