@@ -40,18 +40,17 @@ import org.apache.spark.sql.streaming._
 object StructuredSessionization {
 
   def main(args: Array[String]): Unit = {
-    if (args.length < 2) {
-      System.err.println("Usage: StructuredSessionization <hostname> <port>")
-      System.exit(1)
-    }
 
-    val host = args(0)
-    val port = args(1).toInt
+    val host = "192.168.1.171"
+    val port = 9999
 
     val spark = SparkSession
       .builder
       .appName("StructuredSessionization")
+      .master("local[*]")
       .getOrCreate()
+
+    spark.sparkContext.setLogLevel("WARN")
 
     import spark.implicits._
 

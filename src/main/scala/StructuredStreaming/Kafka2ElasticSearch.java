@@ -100,6 +100,8 @@ public class Kafka2ElasticSearch {
                 .option("es.nodes", "192.168.1.171")
                 .option("es.port", "9200")
                 .option("es.nodes.wan.only", "true")
+                .option("es.write.operation", "upsert")
+                .option("es.mapping.id", "name")
                 .start("test_new_client");
 
         query.awaitTermination();
