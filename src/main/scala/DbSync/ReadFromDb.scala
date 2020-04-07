@@ -22,9 +22,11 @@ object ReadFromDb {
     */
   def ReadData(spark: SparkSession, query: String): Dataset[Row] = {
 
-    val host = "jdbc:mysql://rm-2zenmr2x8h6a23870.mysql.rds.aliyuncs.com"
+    val host = "jdbc:mysql://drdsbggaais5237y.drds.aliyuncs.com"
     val port = 3306
-    val db_name = "market_saas_bigdata_result"
+    val db_name = "test_vhall_business"
+    val user = "test_vhall_business"
+    val pwd = "Testvhallbusiness1"
 
     val url = s"${host}:${port}/${db_name}?useUnicode=true&characterEncoding=UTF-8&useSSL=false"
 
@@ -34,9 +36,9 @@ object ReadFromDb {
         .option("driver", "com.mysql.jdbc.Driver")
         .option("url", url)
         .option("dbtable", s"(${query}) as newtable")
-        .option("user", "market_bigdata")
-        .option("password", "Market@Saas@BigdataOnline")
-        .load().repartition(12)
+        .option("user", user)
+        .option("password", pwd)
+        .load()
 
       return ds
     }catch {

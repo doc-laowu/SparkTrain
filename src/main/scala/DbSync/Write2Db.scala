@@ -25,9 +25,11 @@ object Write2Db {
 
     try {
 
-      val host = "jdbc:mysql://rm-uf62sa98d0fip1xvfo.mysql.rds.aliyuncs.com"
+      val host = "jdbc:mysql://192.168.1.173"
       val port = 3306
-      val db_name = "market_saas_bigdata_result"
+      val db_name = "user_support_service"
+      val user = "root"
+      val pwd = "123456"
 
       val url: String = s"""${host}:${port}/${db_name}?useUnicode=true&characterEncoding=UTF-8&useSSL=false"""
 
@@ -36,8 +38,8 @@ object Write2Db {
         .option("driver", "com.mysql.jdbc.Driver")
         .option("url", url)
         .option("dbtable", tabname)
-        .option("user", "msbr_write")
-        .option("password", "Msbr_write")
+        .option("user", user)
+        .option("password", pwd)
         .save()
 
     } catch {
