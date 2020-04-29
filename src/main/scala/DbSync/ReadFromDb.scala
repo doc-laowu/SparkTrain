@@ -1,5 +1,7 @@
 package DbSync
 
+import java.util.Properties
+
 import org.apache.spark.sql.{Dataset, Row, SparkSession}
 import org.slf4j.LoggerFactory
 
@@ -20,15 +22,17 @@ object ReadFromDb {
     * @param soureProps
     * @return
     */
-  def ReadData(spark: SparkSession, query: String): Dataset[Row] = {
+  def ReadData(spark: SparkSession, query: String, properties: Properties): Dataset[Row] = {
 
-    val host = "jdbc:mysql://drdsbggaais5237y.drds.aliyuncs.com"
-    val port = 3306
-    val db_name = "test_vhall_business"
-    val user = "test_vhall_business"
-    val pwd = "Testvhallbusiness1"
+    val host = properties.getProperty("host")
+    val port = properties.getProperty("port")
+    val db_name = properties.getProperty("db_name")
+    val user = properties.getProperty("user")
+    val pwd = properties.getProperty("pwd")
 
-    val url = s"${host}:${port}/${db_name}?useUnicode=true&characterEncoding=UTF-8&useSSL=false"
+    val url = s"jdbc:mysql://${host}:${port}/${db_name}?useUnicode=true&characterEncoding=UTF-8&useSSL=false"
+
+    println("url======>"+url)
 
     try {
 
@@ -44,6 +48,8 @@ object ReadFromDb {
     }catch {
 
       case e: Exception => {
+
+        e.printStackTrace()
 
         val msg = s"Ocuur error when read the data from the table [ ${query} ], the error is: ${e.getMessage}"
         logger.error(msg)

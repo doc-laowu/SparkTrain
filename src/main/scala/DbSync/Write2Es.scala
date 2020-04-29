@@ -21,7 +21,7 @@ object Write2Es {
 
     val host = "10.10.200.247"
     val port = "9200"
-    val index_name = "consumer_activity_rel/consumer"
+    val index_name = "consumer_activity_rel_test/consumer_activity_rel"
 
     ds.write
       .format("org.elasticsearch.spark.sql")

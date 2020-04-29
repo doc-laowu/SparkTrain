@@ -23,6 +23,7 @@ object TimingUpdateDim {
     val lines = ssc.socketTextStream("192.168.1.171", 9999)
     // Split each line into words
     lines.foreachRDD(rdd=>{
+
       val dimTable = DimTable.getInstance(rdd.sparkContext)
       val currentAccumulatorInterval = new Date().getTime - UpdateTimeCount.getInstance(rdd.sparkContext).value
       if(currentAccumulatorInterval>20000){

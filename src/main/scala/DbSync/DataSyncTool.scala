@@ -1,6 +1,7 @@
 package DbSync
 
 import java.sql.Timestamp
+import java.util.Properties
 
 import Util.TimeUtil
 import com.github.binarywang.java.emoji.EmojiConverter
@@ -51,6 +52,50 @@ object DataSyncTool {
     spark.udf.register("getIndexId", (business_uid: Long, consumer_uid: String)=>GetIndexId(business_uid, consumer_uid))
 
     spark.udf.register("TimeStamp2Date", (timestamp: Timestamp)=>TimeStamp2Date(timestamp))
+
+
+    val propsx = new Properties()
+    propsx.setProperty("host", "rm-uf62sa98d0fip1xvfo.mysql.rds.aliyuncs.com")
+    propsx.setProperty("port", "3306")
+    propsx.setProperty("db_name", "market_saas_bigdata")
+    propsx.setProperty("user", "vodtest")
+    propsx.setProperty("pwd", "Vod@@test")
+
+
+    val props1 = new Properties()
+    props1.setProperty("host", "drdsbggaais5237y.drds.aliyuncs.com")
+    props1.setProperty("port", "3306")
+    props1.setProperty("db_name", "test_vhall_datacenter")
+    props1.setProperty("user", "test_vhall_datacenter")
+    props1.setProperty("pwd", "Testvhalldatacenter1")
+
+    val props2 = new Properties()
+    props2.setProperty("host", "rm-uf62sa98d0fip1xvfo.mysql.rds.aliyuncs.com")
+    props2.setProperty("port", "3306")
+    props2.setProperty("db_name", "market_saas_bigdata_result")
+    props2.setProperty("user", "msbr_read")
+    props2.setProperty("pwd", "Msbr_read")
+
+    val props3 = new Properties()
+    props3.setProperty("host", "drdsbggaais5237y.drds.aliyuncs.com")
+    props3.setProperty("port", "3306")
+    props3.setProperty("db_name", "test_vhall_business")
+    props3.setProperty("user", "test_vhall_business")
+    props3.setProperty("pwd", "Testvhallbusiness1")
+
+    val props4 = new Properties()
+    props4.setProperty("host", "192.168.1.173")
+    props4.setProperty("port", "3306")
+    props4.setProperty("db_name", "user_support_service")
+    props4.setProperty("user", "root")
+    props4.setProperty("pwd", "123456")
+
+    val props5 = new Properties()
+    props5.setProperty("host", "192.168.1.173")
+    props5.setProperty("port", "3306")
+    props5.setProperty("db_name", "activity_support_service")
+    props5.setProperty("user", "root")
+    props5.setProperty("pwd", "123456")
 
 //
 //    val query_1 = """SELECT
@@ -298,30 +343,30 @@ object DataSyncTool {
 //    Write2Db.Save2Rds(ret_DS, "user_support_service.group")
 
 
-    ReadFromDb.ReadData(spark, """select * from test_vhall_business.consumer_tag""").createOrReplaceTempView("consumer_tag")
-
-    ReadFromDb.ReadData(spark, """select * from test_vhall_business.consumer_tag_category_mapping""").createOrReplaceTempView("consumer_tag_category_mapping")
-
-    val query1 =
-      """SELECT
-        |ct.tag_id,
-        |nvl(ctcm.category_id, 0) as category_id,
-        |ct.business_uid,
-        |ct.bu,
-        |ct.tag_name,
-        |ct.describe,
-        |ct.tag_type,
-        |ct.type,
-        |ct.sort,
-        |ct.deleted as is_deleted
-        |FROM
-        |consumer_tag as ct left join
-        |consumer_tag_category_mapping as ctcm on ct.tag_id = ctcm.tag_id
-      """.stripMargin
-
-    val ret_DS: Dataset[Row] = spark.sql(query1)
-
-    Write2Db.Save2Rds(ret_DS, "user_support_service.tag")
+//    ReadFromDb.ReadData(spark, """select * from test_vhall_business.consumer_tag""").createOrReplaceTempView("consumer_tag")
+//
+//    ReadFromDb.ReadData(spark, """select * from test_vhall_business.consumer_tag_category_mapping""").createOrReplaceTempView("consumer_tag_category_mapping")
+//
+//    val query1 =
+//      """SELECT
+//        |ct.tag_id,
+//        |nvl(ctcm.category_id, 0) as category_id,
+//        |ct.business_uid,
+//        |ct.bu,
+//        |ct.tag_name,
+//        |ct.describe,
+//        |ct.tag_type,
+//        |ct.type,
+//        |ct.sort,
+//        |ct.deleted as is_deleted
+//        |FROM
+//        |consumer_tag as ct left join
+//        |consumer_tag_category_mapping as ctcm on ct.tag_id = ctcm.tag_id
+//      """.stripMargin
+//
+//    val ret_DS: Dataset[Row] = spark.sql(query1)
+//
+//    Write2Db.Save2Rds(ret_DS, "user_support_service.tag")
 
 
 
@@ -344,18 +389,18 @@ object DataSyncTool {
 //    Write2Db.Save2Rds(ret_DS, "user_support_service.tag_category")
 
 
-//    ReadFromDb.ReadData(spark, """select * from activity_info""").createOrReplaceTempView("activity_info")
+//    ReadFromDb.ReadData(spark, """select * from activity_info""", propsx).createOrReplaceTempView("activity_info")
 //
-//    ReadFromDb.ReadData(spark, """select * from activity_starttoend""").createOrReplaceTempView("activity_starttoend")
+//    ReadFromDb.ReadData(spark, """select * from activity_starttoend""", propsx).createOrReplaceTempView("activity_starttoend")
 //
-//    ReadFromDb.ReadData(spark, """select * from activity_status_explain_t""").createOrReplaceTempView("activity_status_explain_t")
+//    ReadFromDb.ReadData(spark, """select * from activity_status_explain_t""", propsx).createOrReplaceTempView("activity_status_explain_t")
 //
 //
 //    val query1 =
 //          """SELECT
-//            |T.business_uid,
+//            |NVL(T.business_uid, 0) as business_uid,
 //            |T.bu,
-//            |T.activity_id,
+//            |NVL(T.activity_id, 0) as activity_id,
 //            |ai.live_room as live_room_id,
 //            |ai.hd_room as hd_room_id,
 //            |ai.channel_room as channel_room_id,
@@ -365,8 +410,9 @@ object DataSyncTool {
 //            |yuyue.status as is_yuyue,
 //            |baoming.status as is_baoming
 //            |FROM
-//            |activity_starttoend as T inner join
-//            |activity_info as ai on T.business_uid = ai.business_uid and T.activity_id = ai.activity_id inner join
+//            |activity_info as ai left join
+//            |activity_starttoend as T
+//            |on T.business_uid = ai.business_uid and T.activity_id = ai.activity_id left join
 //            |(
 //            |select
 //            |business_uid,
@@ -376,7 +422,7 @@ object DataSyncTool {
 //            |from
 //            |activity_status_explain_t
 //            |where data_type = 1
-//            |) as yuyue on T.business_uid = yuyue.business_uid and T.activity_id = yuyue.activity_id inner join
+//            |) as yuyue on ai.business_uid = yuyue.business_uid and ai.activity_id = yuyue.activity_id left join
 //            |(
 //            |select
 //            |business_uid,
@@ -386,7 +432,7 @@ object DataSyncTool {
 //            |from
 //            |activity_status_explain_t
 //            |where data_type = 2
-//            |) as baoming on T.business_uid = baoming.business_uid and T.activity_id = baoming.activity_id
+//            |) as baoming on ai.business_uid = baoming.business_uid and ai.activity_id = baoming.activity_id
 //          """.stripMargin
 //
 //        val ret_DS: Dataset[Row] = spark.sql(query1)
@@ -507,83 +553,105 @@ object DataSyncTool {
 
 
 
-//    ReadFromDb.ReadData(spark,
-//      """select
-//        |consumer_uid,
-//        |business_uid,
-//        |visitor_id,
-//        |phone,
-//        |real_name,
-//        |nickname,
-//        |email,
-//        |industry,
-//        |position,
-//        |sex,
-//        |education_level,
-//        |if(birthday = '0000-00-00 00:00:00', null, birthday) as birthday,
-//        |remark,
-//        |is_activated,
-//        |source,
-//        |import_date,
-//        |country,
-//        |province,
-//        |city,
-//        |first_visited_at as first_join,
-//        |last_visited_at as laster_join,
-//        |join_count as join_nums,
-//        |invite_friends_count as invite_nums,
-//        |watch_live_time,
-//        |watch_replay_time,
-//        |user_level,
-//        |wx_union_id,
-//        |wx_qr_open_id,
-//        |wx_open_id,
-//        |bu,
-//        |channel,
-//        |channel_activity_id,
-//        |score,
-//        |deleted
-//        |from consumer""".stripMargin).createOrReplaceTempView("consumer")
+    ReadFromDb.ReadData(spark,
+      """select
+        |consumer_uid,
+        |business_uid,
+        |visitor_id,
+        |phone,
+        |real_name,
+        |nickname,
+        |email,
+        |industry,
+        |position,
+        |sex,
+        |education_level,
+        |if(birthday = '0000-00-00 00:00:00', null, birthday) as birthday,
+        |remark,
+        |is_activated,
+        |source,
+        |if(import_date = '0000-00-00 00:00:00', null, import_date) as import_date,
+        |country,
+        |province,
+        |city,
+        |if(first_visited_at = '0000-00-00 00:00:00', null, first_visited_at) as first_visited_at,
+        |if(last_visited_at = '0000-00-00 00:00:00', null, last_visited_at) as last_visited_at,
+        |join_count,
+        |invite_friends_count,
+        |watch_live_time,
+        |watch_replay_time,
+        |user_level,
+        |wx_union_id,
+        |wx_qr_open_id,
+        |wx_open_id,
+        |bu,
+        |channel,
+        |channel_activity_id,
+        |score,
+        |deleted,
+        |updated_at
+        |from consumer limit 100""".stripMargin, props3).show(100)
+//      .createOrReplaceTempView("consumer")
+
+////    val business_consumer_rel =  spark.sql(
+////      """
+////        |select
+////        |business_uid,
+////        |consumer_uid,
+////        |visitor_id
+////        |from
+////        |consumer
+////      """.stripMargin)
+////
+////    Write2Db.Save2Rds(business_consumer_rel, "user_support_service.business_consumer_rel")
 //
+//
+//    ReadFromDb.ReadData(spark,
+//      """
+//        |select * from business_consumer_mapping
+//      """.stripMargin, props4).createOrReplaceTempView("business_consumer_rel")
 //
 //
 //    val ret_DS = spark.sql(
 //      """select
-//        |getIndexId(business_uid, case when consumer_uid = 0 then visitor_id else consumer_uid end) as _id,
-//        |case when consumer_uid = 0 then visitor_id else consumer_uid end as consumer_uid,
-//        |cast(business_uid as bigint) as business_uid,
-//        |phone,
-//        |real_name,
-//        |nickname,
-//        |email,
-//        |industry,
-//        |position,
-//        |sex,
-//        |education_level,
-//        |birthday,
-//        |remark,
-//        |is_activated,
-//        |source,
-//        |import_date,
-//        |country,
-//        |province,
-//        |city,
-//        |first_join,
-//        |laster_join,
-//        |cast(join_nums as bigint) as join_nums,
-//        |cast(invite_nums as bigint) as invite_nums,
-//        |cast(watch_live_time + watch_replay_time as bigint) as total_tt,
-//        |cast(user_level as bigint) as user_level,
-//        |wx_union_id,
-//        |wx_qr_open_id,
-//        |wx_open_id,
-//        |bu,
-//        |channel,
-//        |channel_activity_id,
-//        |deleted
+//        |B.business_consumer_uid as _id,
+//        |case when C.consumer_uid = 0 then C.visitor_id else C.consumer_uid end as consumer_uid,
+//        |cast(C.business_uid as bigint) as business_uid,
+//        |C.phone,
+//        |C.real_name,
+//        |C.nickname,
+//        |C.email,
+//        |C.industry,
+//        |C.position,
+//        |C.sex,
+//        |C.education_level,
+//        |C.birthday,
+//        |C.remark,
+//        |cast(if(C.is_activated='N', 0, 1) as long) as is_activated,
+//        |C.source,
+//        |C.import_date,
+//        |C.country,
+//        |C.province,
+//        |C.city,
+//        |C.first_visited_at,
+//        |C.last_visited_at,
+//        |cast(C.join_count as int) as join_count,
+//        |cast(C.invite_friends_count as int) as invite_friends_count,
+//        |cast(C.watch_live_time as int) as watch_live_time,
+//        |cast(C.watch_replay_time as int) as watch_replay_time,
+//        |cast(C.user_level as int) as user_level,
+//        |C.wx_union_id,
+//        |C.wx_qr_open_id,
+//        |C.wx_open_id,
+//        |C.bu,
+//        |C.channel,
+//        |C.channel_activity_id,
+//        |C.deleted
 //        |from
-//        |consumer
+//        |consumer as C inner join business_consumer_rel as B ON C.business_uid = B.business_uid AND C.consumer_uid = B.consumer_uid AND C.visitor_id = B.visitor_id
 //      """.stripMargin)
+//
+//    ret_DS.printSchema()
 //
 //    val script =
 //      """ctx._source.business_uid=params.business_uid;
@@ -604,11 +672,12 @@ object DataSyncTool {
 //        |ctx._source.country=params.country;
 //        |ctx._source.province=params.province;
 //        |ctx._source.city=params.city;
-//        |ctx._source.first_join=params.first_join;
-//        |ctx._source.laster_join=params.laster_join;
-//        |ctx._source.join_nums=params.join_nums;
-//        |ctx._source.invite_nums=params.invite_nums;
-//        |ctx._source.total_tt=params.total_tt;
+//        |ctx._source.first_visited_at=params.first_visited_at;
+//        |ctx._source.last_visited_at=params.last_visited_at;
+//        |ctx._source.join_count=params.join_count;
+//        |ctx._source.invite_friends_count=params.invite_friends_count;
+//        |ctx._source.watch_live_time=params.watch_live_time;
+//        |ctx._source.watch_replay_time=params.watch_replay_time;
 //        |ctx._source.user_level=params.user_level;
 //        |ctx._source.wx_union_id=params.wx_union_id;
 //        |ctx._source.wx_qr_open_id=params.wx_qr_open_id;
@@ -639,11 +708,12 @@ object DataSyncTool {
 //        |country:country,
 //        |province:province,
 //        |city:city,
-//        |first_join:first_join,
-//        |laster_join:laster_join,
-//        |join_nums:join_nums,
-//        |invite_nums:invite_nums,
-//        |total_tt:total_tt,
+//        |first_visited_at:first_visited_at,
+//        |last_visited_at:last_visited_at,
+//        |join_count:join_count,
+//        |invite_friends_count:invite_friends_count,
+//        |watch_live_time:watch_live_time,
+//        |watch_replay_time:watch_replay_time,
 //        |user_level:user_level,
 //        |wx_union_id:wx_union_id,
 //        |wx_qr_open_id:wx_qr_open_id,
@@ -675,38 +745,80 @@ object DataSyncTool {
 //        |city,
 //        |watch_live_time as live_tt,
 //        |watch_replay_time as vod_tt,
-//        |last_leave_at as watch_date
-//        |from activity_consumer""".stripMargin).createOrReplaceTempView("activity_consumer")
+//        |last_leave_at as watch_date,
+//        |deleted
+//        |from activity_consumer""".stripMargin, props1).createOrReplaceTempView("activity_consumer")
+//
+////    ReadFromDb.ReadData(spark,
+////      """
+////        |select * from business_consumer_rel
+////      """.stripMargin, props4).createOrReplaceTempView("business_consumer_rel")
+////
+////    val activity_consumer_rel = spark.sql(
+////      """
+////        |select A.activity_id, B.business_consumer_uid, A.consumer_uid, B.visitor_id from activity_consumer as A inner join business_consumer_rel AS B
+////        |ON A.business_uid = B.business_uid and A.consumer_uid = B.consumer_uid and A.visitor_id = B.visitor_id
+////      """.stripMargin)
+////
+////    Write2Db.Save2Rds(activity_consumer_rel, "activity_support_service.activity_consumer_rel")
+//
+//    ReadFromDb.ReadData(spark,
+//      """
+//        |select * from activity_consumer_mapping
+//      """.stripMargin, props5).createOrReplaceTempView("activity_consumer_rel")
+//
+//    ReadFromDb.ReadData(spark,
+//      """select
+//        |distinct
+//        |business_uid,
+//        |activity_id,
+//        |bu,
+//        |consumer_uid,
+//        |pf
+//        |from user_watch_data""".stripMargin, props2).createOrReplaceTempView("user_watch_data")
 //
 //
-//    val ret_DS = spark.sql(
+//    var ret_DS = spark.sql(
 //      """
 //        |select
-//        |getIndexId(activity_id, case when consumer_uid = 0 then visitor_id else consumer_uid end) as _id,
-//        |cast(business_uid as bigint) as business_uid,
-//        |cast(activity_id as bigint) as activity_id,
-//        |bu,
-//        |cast(consumer_uid as bigint) as consumer_uid,
-//        |cast(score as bigint) as score,
-//        |os,
-//        |device,
-//        |browser,
-//        |sex,
-//        |country,
-//        |province,
-//        |city,
-//        |case when live_tt > 0 OR vod_tt > 0 then 1 else 0 end as is_watch,
-//        |cast(live_tt as bigint) as live_tt,
-//        |cast(vod_tt as bigint) as vod_tt,
-//        |TimeStamp2Date(watch_date) as watch_date
+//        |A.activity_consumer_uid as _id,
+//        |A.business_consumer_uid,
+//        |T.*
 //        |from
-//        |activity_consumer
+//        |(
+//        |select
+//        |cast(A.business_uid as bigint) as business_uid,
+//        |cast(A.activity_id as bigint) as activity_id,
+//        |A.bu,
+//        |A.visitor_id,
+//        |case when A.consumer_uid = 0 then A.visitor_id else A.consumer_uid end as consumer_uid,
+//        |cast(A.score as bigint) as score,
+//        |A.os,
+//        |case when A.device = 'PC' then 3 when A.device = 'MOBILE' then 7 else 5 end as device,
+//        |A.browser,
+//        |A.sex,
+//        |A.country,
+//        |A.province,
+//        |A.city,
+//        |case when A.live_tt > 0 OR A.vod_tt > 0 then 1 else 0 end as is_watch,
+//        |cast(A.live_tt as int) as live_tt,
+//        |cast(A.vod_tt as int) as vod_tt,
+//        |TimeStamp2Date(A.watch_date) as watch_date,
+//        |B.pf,
+//        |A.deleted
+//        |from
+//        |activity_consumer as A left join
+//        |user_watch_data as B on A.activity_id = B.activity_id and A.consumer_uid = B.consumer_uid
+//        |) as T inner join activity_consumer_rel as A
+//        |on T.activity_id = A.activity_id and T.consumer_uid = A.consumer_uid and T.visitor_id = A.visitor_id
 //      """.stripMargin)
 //
 //    ret_DS.printSchema()
 //
 //    val script =
-//      """ctx._source.business_uid=params.business_uid;
+//      """
+//        |ctx._source.business_consumer_uid=params.business_consumer_uid;
+//        |ctx._source.business_uid=params.business_uid;
 //        |ctx._source.activity_id=params.activity_id;
 //        |ctx._source.bu=params.bu;
 //        |ctx._source.consumer_uid=params.consumer_uid;
@@ -722,10 +834,13 @@ object DataSyncTool {
 //        |ctx._source.live_tt=params.live_tt;
 //        |ctx._source.vod_tt=params.vod_tt;
 //        |ctx._source.watch_date=params.watch_date;
+//        |ctx._source.pf=params.pf;
+//        |ctx._source.deleted=params.deleted
 //      """.stripMargin.replaceAll("""[\\|\s*|\t|\r|\n]""", "")
 //
 //    val params =
 //      """
+//        |business_consumer_uid:business_consumer_uid,
 //        |business_uid:business_uid,
 //        |activity_id:activity_id,
 //        |bu:bu,
@@ -740,8 +855,10 @@ object DataSyncTool {
 //        |city:city,
 //        |is_watch:is_watch,
 //        |live_tt:live_tt,
-//        |vod_tt:live_tt,
-//        |watch_date:watch_date
+//        |vod_tt:vod_tt,
+//        |watch_date:watch_date,
+//        |pf:pf,
+//        |deleted:deleted
 //      """.stripMargin.replaceAll("""[\\|\s*|\t|\r|\n]""", "")
 //
 //    Write2Es.Upsert2Es(ret_DS, script, params)

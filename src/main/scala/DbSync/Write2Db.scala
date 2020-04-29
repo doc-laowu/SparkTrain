@@ -27,7 +27,7 @@ object Write2Db {
 
       val host = "jdbc:mysql://192.168.1.173"
       val port = 3306
-      val db_name = "user_support_service"
+      val db_name = "activity_support_service"
       val user = "root"
       val pwd = "123456"
 
