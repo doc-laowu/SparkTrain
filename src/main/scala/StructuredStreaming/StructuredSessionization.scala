@@ -72,8 +72,9 @@ object StructuredSessionization {
     // Sessionize the events. Track number of events, start and end timestamps of session,
     // and report session updates.
     val sessionUpdates = events
+      .withWatermark("timestamp", "5 seconds")
       .groupByKey(event => event.sessionId)
-      .mapGroupsWithState[SessionInfo, SessionUpdate](GroupStateTimeout.ProcessingTimeTimeout) {
+      .mapGroupsWithState[SessionInfo, SessionUpdate](GroupStateTimeout.EventTimeTimeout()) {
 
         case (sessionId: String, events: Iterator[Event], state: GroupState[SessionInfo]) =>
 
@@ -98,7 +99,8 @@ object StructuredSessionization {
             state.update(updatedSession)
 
             // Set timeout such that the session will be expired if no data received for 10 seconds
-            state.setTimeoutDuration("10 seconds")
+//            state.setTimeoutDuration("10 seconds")
+            state.setTimeoutTimestamp(updatedSession.endTimestampMs, "1 seconds")
             SessionUpdate(sessionId, state.get.durationMs, state.get.numEvents, expired = false)
           }
       }
@@ -107,6 +109,7 @@ object StructuredSessionization {
     val query = sessionUpdates
       .writeStream
       .outputMode("update")
+//      .outputMode("append")
       .format("console")
       .start()
 

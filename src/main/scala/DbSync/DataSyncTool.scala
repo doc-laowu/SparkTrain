@@ -45,6 +45,7 @@ object DataSyncTool {
 
     val spark = SparkSession.builder()
       .master("local[*]")
+      .config("spark.debug.maxToStringFields", 500)
       .getOrCreate()
 
     spark.udf.register("emojiConverter", (nickname: String)=>emojiConverter(nickname))
@@ -553,44 +554,37 @@ object DataSyncTool {
 
 
 
-    ReadFromDb.ReadData(spark,
+    val ds = ReadFromDb.ReadData(spark,
       """select
         |consumer_uid,
         |business_uid,
-        |visitor_id,
-        |phone,
-        |real_name,
-        |nickname,
-        |email,
-        |industry,
-        |position,
-        |sex,
-        |education_level,
-        |if(birthday = '0000-00-00 00:00:00', null, birthday) as birthday,
-        |remark,
-        |is_activated,
-        |source,
-        |if(import_date = '0000-00-00 00:00:00', null, import_date) as import_date,
-        |country,
-        |province,
-        |city,
-        |if(first_visited_at = '0000-00-00 00:00:00', null, first_visited_at) as first_visited_at,
-        |if(last_visited_at = '0000-00-00 00:00:00', null, last_visited_at) as last_visited_at,
-        |join_count,
-        |invite_friends_count,
         |watch_live_time,
-        |watch_replay_time,
-        |user_level,
-        |wx_union_id,
-        |wx_qr_open_id,
-        |wx_open_id,
-        |bu,
-        |channel,
-        |channel_activity_id,
-        |score,
-        |deleted,
-        |updated_at
-        |from consumer limit 100""".stripMargin, props3).show(100)
+        |watch_replay_time
+        |from consumer limit 50""".stripMargin, props3);
+
+//    ds.take(1)
+
+    ds.explain(true)
+
+    ds.createOrReplaceTempView("consumer")
+
+    val tmp_ds_1 = spark.sql("select consumer_uid, business_uid, watch_live_time from consumer where watch_live_time > 0")
+
+    val tmp_ds_2 = spark.sql("select consumer_uid, watch_live_time from consumer where watch_replay_time > 100")
+
+//    ds.cache()
+
+//    val tmp_ds: Dataset[Row] = ds.filter("watch_live_time > 0").select("consumer_uid", "business_uid", "watch_live_time")
+
+    tmp_ds_1.explain(true)
+
+    tmp_ds_1.show(100)
+
+
+    tmp_ds_2.explain(true)
+
+    tmp_ds_2.show(100)
+
 //      .createOrReplaceTempView("consumer")
 
 ////    val business_consumer_rel =  spark.sql(

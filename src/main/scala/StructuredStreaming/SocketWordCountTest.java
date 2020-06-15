@@ -1,4 +1,4 @@
-//package StructuredStreaming;//package StructuredStreaming;
+//package StructuredStreaming;
 //
 //import org.apache.commons.lang.time.FastDateFormat;
 //import org.apache.spark.api.java.function.FlatMapFunction;
@@ -13,7 +13,6 @@
 //import java.sql.Timestamp;
 //import java.text.SimpleDateFormat;
 //import java.util.ArrayList;
-//import java.util.Iterator;
 //import java.util.List;
 //
 ///**
