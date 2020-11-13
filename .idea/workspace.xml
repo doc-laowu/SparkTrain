@@ -2,25 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71623eb7-518f-4e2d-9f47-432059d5279b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AvroDemo/IpAnalysisDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AvroDemo/IpLocaltion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AvroDemo/TimeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkSql/Write2EsByJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewGenerator.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewStream.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark2/src/main/java/YarnClient/ApplicationMaster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark2/src/main/java/YarnClient/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/GraphXTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/SocketWordCountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/wordcount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark3/src/main/java/sparksql/DealCountry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark3/src/main/scala/RocksDbStateStoreProvider.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark3/src/main/scala/implicits.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spark3/src/main/scala/wordcount.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/DbSync/DataSyncTool.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DbSync/DataSyncTool.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/DbSync/ReadFromDb.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DbSync/ReadFromDb.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/MyTimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/MyTimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/SocketWordCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/SocketWordCountTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingFromKafka.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredSessionization.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredSessionization.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AvroDemo/IpAnalysisDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/java/AvroDemo/IpAnalysisDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AvroDemo/IpLocaltion.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/java/AvroDemo/IpLocaltion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AvroDemo/TimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/java/AvroDemo/TimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/UserBehavior.csv" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/UserBehavior.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/employees.json" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/employees.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/full_user.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/full_user.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/kv1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/kv1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/people.csv" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/people.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/people.json" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/people.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/people.txt" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/people.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/user.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/user.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/users.avro" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/users.avro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/users.parquet" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/resources/users.parquet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DbSync/DataSyncTool.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DbSync/DataSyncTool.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DbSync/ReadFromDb.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DbSync/ReadFromDb.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DbSync/Write2Db.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DbSync/Write2Db.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DbSync/Write2Es.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DbSync/Write2Es.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/ConditionUpdate.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/ConditionUpdate.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/DelUpdateMergeDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/DelUpdateMergeDemo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/ReadDataByVersion.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/ReadDataByVersion.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/ReadStream.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/ReadStream.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/ReadWriteDemo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/ReadWriteDemo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/VacuumTab.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/VacuumTab.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DeltaLake/WriteStream.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/DeltaLake/WriteStream.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/RealTimeDial/BCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/RealTimeDial/BCD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/RealTimeDial/BillConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/RealTimeDial/BillConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/RealTimeDial/BillInfoFmt.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/RealTimeDial/BillInfoFmt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/RealTimeDial/RocketMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/RealTimeDial/RocketMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/RealTimeDial/SaleAnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/RealTimeDial/SaleAnalysisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ScalaTest/myTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/ScalaTest/myTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkCore/MyAverage.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/MyAverage.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkCore/RDD2DF.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/RDD2DF.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkCore/RddAccumulators.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/RddAccumulators.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkCore/myAvg.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/myAvg.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkCore/wordcount.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/wordcount.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/AggregationOperator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/AggregationOperator.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/DataSource.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/DataSource.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/HiveTableTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/HiveTableTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/LoadDataFromJdbc.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/LoadDataFromJdbc.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/SparkSQL2Es.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/SparkSQL2Es.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/WirteSeqToESArr.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/WirteSeqToESArr.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/Write2EsByJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/Write2EsByJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkSql/Write2EsTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkSql/Write2EsTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/KafkaCreateRdd.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/KafkaCreateRdd.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewGenerator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/PageViewGenerator.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewStream.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/PageViewStream.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/RddQueueStream.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/RddQueueStream.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/SparkWindowOp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/SparkWindowOp.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/StreamingCk.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/StreamingCk.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/StreamingOperation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/StreamingOperation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/TimingUpdateDim.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/TimingUpdateDim.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming/wordcountStreaming.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/wordcountStreaming.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/CountBasedWindows.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/CountBasedWindows.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/FileSourceTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/FileSourceTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/HotItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/HotItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/Kafka2ElasticSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/Kafka2ElasticSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/MyTimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/MyTimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/Sessionization.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/Sessionization.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/SocketWordCountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/SocketWordCountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/StructedStreamingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredSessionization.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/StructuredSessionization.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/StructuredStreaming/WordBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/WordBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Util/TimeUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/spark2/src/main/scala/Util/TimeUtil.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/ConditionUpdate$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/ConditionUpdate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/ReadDataByVersion$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/ReadDataByVersion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/ReadWriteDemo$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/ReadWriteDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/WriteStream$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/WriteStream$$typecreator7$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/WriteStream$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DeltaLake/WriteStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ScalaTest/myTest$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ScalaTest/myTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/Average$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/Average.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/Employee$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/MyAverage$$typecreator1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/MyAverage$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/MyAverage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/MyAverageTest$$typecreator5$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/MyAverageTest$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/MyAverageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$$anonfun$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$$anonfun$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RDD2DF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RddAccumulators$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RddAccumulators$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/RddAccumulators.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/myAvg$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/myAvg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/myAvgTest$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/myAvgTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/wordcount$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/wordcount$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/wordcount$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/wordcount$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/wordcount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/words$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkCore/words.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/DataSource$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/DataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/HiveTableTest$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/HiveTableTest$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/HiveTableTest$$typecreator4$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/HiveTableTest$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/HiveTableTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/LoadDataFromJdbc$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/LoadDataFromJdbc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/Record$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkSql/Record.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/KafkaCreateRdd$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/KafkaCreateRdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/RddQueueStream$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/RddQueueStream$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/RddQueueStream$$anonfun$main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/RddQueueStream$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/RddQueueStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/SparkWindowOp$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/SparkWindowOp$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/SparkWindowOp$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/SparkWindowOp$$anonfun$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/SparkWindowOp$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/SparkWindowOp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingCk$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingCk$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingCk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingOperation$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingOperation$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingOperation$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingOperation$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/StreamingOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$$anonfun$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$$anonfun$2$$anonfun$apply$2$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$$anonfun$2$$anonfun$apply$2$$anonfun$apply$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$$anonfun$2$$anonfun$apply$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$$anonfun$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$$anonfun$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming/wordcountStreaming.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StructuredStreaming/FileSourceTest$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StructuredStreaming/FileSourceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/TimeUtil$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/TimeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/employees.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/full_user.avsc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kv1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/people.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/people.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/people.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/user.avsc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/users.avro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/users.parquet" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/spark3/target/" />
+    <ignored path="$PROJECT_DIR$/spark2/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +194,20 @@
     <SUITE FILE_PATH="coverage/SparkTrain$StructuredSessionization.ic" NAME="StructuredSessionization Coverage Results" MODIFIED="1577693648074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>StructuredStreaming.*</FILTER>
     </SUITE>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-238914487">
@@ -86,58 +260,61 @@
     <session id="-1863312328">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="43" />
-          <entry key="project.open.time.1" value="16" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.closed" value="70" />
+          <entry key="project.open.time.1" value="21" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.17" value="2" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.2" value="13" />
+          <entry key="project.open.time.17" value="3" />
+          <entry key="project.open.time.18" value="3" />
+          <entry key="project.open.time.2" value="19" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.open.time.3" value="7" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="44" />
+          <entry key="project.open.time.3" value="14" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="71" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="avro" value="2" />
-          <entry key="avsc" value="4" />
-          <entry key="class" value="21" />
-          <entry key="csv" value="8" />
+          <entry key="avsc" value="5" />
+          <entry key="class" value="33" />
+          <entry key="csv" value="9" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="139" />
+          <entry key="java" value="207" />
           <entry key="json" value="3" />
-          <entry key="scala" value="251" />
+          <entry key="pom" value="1" />
+          <entry key="scala" value="385" />
           <entry key="txt" value="2" />
-          <entry key="xml" value="25" />
+          <entry key="xml" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="21" />
-          <entry key="JAVA" value="139" />
+          <entry key="CLASS" value="33" />
+          <entry key="JAVA" value="207" />
           <entry key="JSON" value="3" />
-          <entry key="PLAIN_TEXT" value="17" />
-          <entry key="Scala" value="251" />
-          <entry key="XML" value="25" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="Scala" value="385" />
+          <entry key="XML" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="csv" value="64" />
-          <entry key="java" value="2996" />
-          <entry key="scala" value="13271" />
-          <entry key="xml" value="44" />
+          <entry key="java" value="4278" />
+          <entry key="scala" value="13431" />
+          <entry key="xml" value="129" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2996" />
+          <entry key="JAVA" value="4278" />
           <entry key="PLAIN_TEXT" value="64" />
-          <entry key="Scala" value="13271" />
-          <entry key="XML" value="44" />
+          <entry key="Scala" value="13431" />
+          <entry key="XML" value="129" />
         </counts>
       </usages-collector>
     </session>
@@ -145,68 +322,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredSessionization.scala">
+        <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkCore/wordcount.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#857#882#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="110" column="3" lean-forward="true" selection-start-line="110" selection-start-column="3" selection-end-line="110" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#4000#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
-              <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-              <folding>
-                <element signature="e#29#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="234">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/WordBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/MyTimeUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/SocketWordCountTest.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/SparkContext.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="817">
-              <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+              <caret line="219" column="93" lean-forward="true" selection-start-line="219" selection-start-column="93" selection-end-line="219" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -216,25 +344,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>plan</find>
-      <find>import_date</find>
-      <find>consumer_uid</find>
-      <find>cast</find>
-      <find>visitor_id</find>
-      <find>business_consumer_rel</find>
-      <find>sex</find>
-      <find>is_activated</find>
-      <find>real_name</find>
-      <find>watch_replay_time</find>
-      <find>watch_live_time</find>
-      <find>de</find>
-      <find>device</find>
       <find>activity_live</find>
       <find>business_uid</find>
       <find>Tuple5</find>
@@ -252,6 +368,19 @@
       <find>timestamp</find>
       <find>inav_e301abbf</find>
       <find>true</find>
+      <find>flatMap</find>
+      <find>count</find>
+      <find>JobSubmitted</find>
+      <find>handleJobSubmitted</find>
+      <find>createCache</find>
+      <find>localSnapshots</find>
+      <find>actualCheckpointRoot</find>
+      <find>RDD</find>
+      <find>SocketReceiver</find>
+      <find>generate</find>
+      <find>reduceByKey</find>
+      <find>map</find>
+      <find>compute</find>
     </findStrings>
     <replaceStrings>
       <replace>InputRow2</replace>
@@ -264,21 +393,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/SparkStreaming/KafkaCreateRdd.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/SparkStreaming/SparkWindowOp.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/SparkStreaming/StreamingOperation.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/SparkCore/myAvg.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/ConditionUpdate.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/ReadDataByVersion.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/WriteStream.java" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/ReadWriteDemo.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DbSync/consumer_business_info_sync.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/ReadStream.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/WriteStream.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/DelUpdateMergeDemo.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/SparkSql/DataSource.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DeltaLake/VacuumTab.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/Kafka2ElasticSearch.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/UserBehavior.csv" />
         <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/HotItems.java" />
         <option value="$PROJECT_DIR$/src/main/scala/RealTimeDial/BCD.java" />
@@ -299,14 +413,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/SparkSql/SparkSQL2Es.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/SparkStreaming/TimingUpdateDim.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingFromKafka.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java" />
         <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/SocketWordCountTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/AvroDemo/TimeUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/AvroDemo/IpLocaltion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AvroDemo/IpAnalysisDemo.java" />
         <option value="$PROJECT_DIR$/src/main/scala/DbSync/ReadFromDb.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DbSync/DataSyncTool.scala" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/SparkSql/Write2EsByJava.java" />
         <option value="$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewGenerator.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewStream.scala" />
@@ -315,6 +425,25 @@
         <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/Sessionization.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredSessionization.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/java/YarnClient/Client.java" />
+        <option value="$PROJECT_DIR$/src/main/java/YarnClient/ApplicationMaster.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/scala/StructuredStreaming/IpAnalysisDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AvroDemo/IpAnalysisDemo.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/wordcount.java" />
+        <option value="$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/SocketWordCountTest.java" />
+        <option value="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/wordcount.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/DbSync/DataSyncTool.scala" />
+        <option value="$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/RedisStateStoreProvider.java" />
+        <option value="$PROJECT_DIR$/spark3/src/main/java/SSStateProvider.java" />
+        <option value="$PROJECT_DIR$/spark3/pom.xml" />
+        <option value="$PROJECT_DIR$/spark3/src/main/scala/RocksDbStateStoreProvider.scala" />
+        <option value="$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/wordcountStreaming.scala" />
+        <option value="$PROJECT_DIR$/spark3/src/main/java/sparksql/DealCountry.java" />
+        <option value="$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/SocketWordCountTest.java" />
+        <option value="$PROJECT_DIR$/spark2/pom.xml" />
+        <option value="$PROJECT_DIR$/spark2/src/main/scala/SparkCore/GraphXTest.scala" />
       </list>
     </option>
   </component>
@@ -324,12 +453,26 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Program Files\apache-maven-3.5.4\maven-repository" />
+        <option name="mavenHome" value="E:/Program Files/apache-maven-3.5.4" />
+        <option name="userSettingsFile" value="E:\Program Files\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="SparkTrain" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="spark2" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spark2" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
@@ -349,7 +492,6 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -360,72 +502,68 @@
             <path>
               <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
+              <item name="spark2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
+              <item name="spark2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
+              <item name="spark2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
+              <item name="spark2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="SparkStreaming" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SparkTrain" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkTrain" type="462c0819:PsiDirectoryNode" />
+              <item name="spark2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="SparkCore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="rddToPairRddFunctions&#9;null&#9;null&#10;MainGenericRunner&#9;null&#9;null&#10;DAG&#9;FILE&#9;jar://E:/Program Files/apache-maven-3.5.4/maven-repository/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/scheduler/DAGScheduler.scala" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1592213213262" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Jdk8Train" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1605007249821" />
+    <property name="last_opened_file_path" value="E:/workspace/real_data_lpi_clean" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="DbSync" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\git\SparkTrain\spark3\src\main\scala" />
+      <recent name="D:\workspace\git\SparkTrain\spark3\src\main\java\StructuredStreaming" />
+      <recent name="D:\workspace\git\SparkTrain\spark2" />
+      <recent name="D:\workspace\git\SparkTrain\src\main\java\YarnClient" />
       <recent name="D:\workspace\git\SparkTrain\src\main\scala\SparkStreaming" />
-      <recent name="D:\workspace\git\SparkTrain\src\main\java\AvroDemo" />
-      <recent name="D:\workspace\git\SparkTrain\src\main\scala\StructuredStreaming" />
-      <recent name="D:\workspace\SparkTrain" />
-      <recent name="D:\workspace\SparkTrain\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -440,13 +578,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StructuredStreamingTest">
-    <configuration name="CountBasedWindows" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="StructuredStreaming.CountBasedWindows" />
-      <module name="SparkTrain" />
+  <component name="RunManager" selected="Application.wordcount">
+    <configuration name="DataSource" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkSql.DataSource" />
+      <module name="spark2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StructuredStreaming.*" />
+          <option name="PATTERN" value="SparkSql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -454,12 +592,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PageViewStream" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="SparkStreaming.PageViewStream" />
-      <module name="SparkTrain" />
+    <configuration name="DealCountry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sparksql.DealCountry" />
+      <module name="spark3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SparkStreaming.*" />
+          <option name="PATTERN" value="sparksql.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -467,12 +605,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sessionization" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="StructuredStreaming.Sessionization" />
-      <module name="SparkTrain" />
+    <configuration name="GraphXTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkCore.GraphXTest" />
+      <module name="spark2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StructuredStreaming.*" />
+          <option name="PATTERN" value="SparkCore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -480,12 +618,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StructuredSessionization" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="StructuredStreaming.StructuredSessionization" />
-      <module name="SparkTrain" />
+    <configuration name="wordcount (1)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkCore.wordcount" />
+      <module name="spark3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StructuredStreaming.*" />
+          <option name="PATTERN" value="SparkCore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -493,12 +631,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StructuredStreamingTest" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="StructuredStreaming.StructuredStreamingTest" />
-      <module name="SparkTrain" />
+    <configuration name="wordcount" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkCore.wordcount" />
+      <module name="spark2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StructuredStreaming.*" />
+          <option name="PATTERN" value="SparkCore.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -507,19 +645,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.StructuredSessionization" />
-      <item itemvalue="Application.PageViewStream" />
-      <item itemvalue="Application.CountBasedWindows" />
-      <item itemvalue="Application.StructuredStreamingTest" />
-      <item itemvalue="Application.Sessionization" />
+      <item itemvalue="Application.wordcount" />
+      <item itemvalue="Application.DataSource" />
+      <item itemvalue="Application.wordcount (1)" />
+      <item itemvalue="Application.DealCountry" />
+      <item itemvalue="Application.GraphXTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StructuredStreamingTest" />
-        <item itemvalue="Application.StructuredSessionization" />
-        <item itemvalue="Application.Sessionization" />
-        <item itemvalue="Application.CountBasedWindows" />
-        <item itemvalue="Application.PageViewStream" />
+        <item itemvalue="Application.wordcount" />
+        <item itemvalue="Application.GraphXTest" />
+        <item itemvalue="Application.DealCountry" />
+        <item itemvalue="Application.wordcount (1)" />
+        <item itemvalue="Application.DataSource" />
       </list>
     </recent_temporary>
   </component>
@@ -597,18 +735,45 @@
       <workItem from="1591667596317" duration="1606000" />
       <workItem from="1591943034577" duration="36610000" />
       <workItem from="1592125749566" duration="2231000" />
-      <workItem from="1592203478045" duration="3572000" />
+      <workItem from="1592203478045" duration="3619000" />
+      <workItem from="1592299181538" duration="611000" />
+      <workItem from="1592300983087" duration="2541000" />
+      <workItem from="1592358763391" duration="3581000" />
+      <workItem from="1592375042616" duration="2932000" />
+      <workItem from="1592970287806" duration="444000" />
+      <workItem from="1598509424548" duration="7539000" />
+      <workItem from="1598581626624" duration="2345000" />
+      <workItem from="1598597498971" duration="46000" />
+      <workItem from="1599012178132" duration="3691000" />
+      <workItem from="1599474342802" duration="2342000" />
+      <workItem from="1599530222630" duration="632000" />
+      <workItem from="1599563500207" duration="236000" />
+      <workItem from="1599617528450" duration="2336000" />
+      <workItem from="1599790583835" duration="1122000" />
+      <workItem from="1599805651911" duration="3477000" />
+      <workItem from="1600224511307" duration="713000" />
+      <workItem from="1600413827994" duration="8848000" />
+      <workItem from="1600932066445" duration="8781000" />
+      <workItem from="1602485903177" duration="1580000" />
+      <workItem from="1602488005098" duration="894000" />
+      <workItem from="1603337909744" duration="442000" />
+      <workItem from="1603359221888" duration="2683000" />
+      <workItem from="1603594190514" duration="2475000" />
+      <workItem from="1603612108510" duration="770000" />
+      <workItem from="1603622747818" duration="1531000" />
+      <workItem from="1604321770357" duration="2611000" />
+      <workItem from="1605004775183" duration="968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334215000" />
+    <option name="totallyTimeSpent" value="400433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4838275" visible="true" weight="0.23454158" />
+      <window_info id="Structure" order="1" sideWeight="0.5161725" side_tool="true" weight="0.22686376" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -616,7 +781,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.45986986" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.5802603" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.55856836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -634,13 +799,48 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="10" weight="0.32942432" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967462" visible="true" weight="0.21695095" />
+      <window_info id="Structure" order="1" sideWeight="0.50270855" side_tool="true" weight="0.21695095" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.5802603" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.55856836" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3253796" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50159913" side_tool="true" weight="0.6724512" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.36984816" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Tool Output" order="12" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3286334" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.32942432" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -648,369 +848,386 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/wordcount.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/wordcount.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/wordcount.java</url>
+          <line>44</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/scheduler/DAGScheduler.scala</url>
+          <line>961</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/spark2/src/main/scala/SparkCore/wordcount.scala</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/RealTimeDial/RocketMQConfig.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/RealTimeDial/SaleAnalysisService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/RealTimeDial/BCD.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/scheduler/JobGenerator.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="419">
+          <caret line="247" column="47" selection-start-line="247" selection-start-column="47" selection-end-line="247" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/RealTimeDial/BillConsumer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/scheduler/JobScheduler.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4142">
-          <caret line="218" column="50" selection-start-line="218" selection-start-column="50" selection-end-line="218" selection-end-column="50" />
+        <state relative-caret-position="1092">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/RealTimeDial/BillInfoFmt.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/dstream/PairDStreamFunctions.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1577">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+        <state relative-caret-position="505">
+          <caret line="464" column="15" lean-forward="true" selection-start-line="464" selection-start-column="15" selection-end-line="464" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/expressions/UserDefinedFunction.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/dstream/StateDStream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+        <state relative-caret-position="208">
+          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/HotItems.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/api/java/JavaDStream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="84" column="26" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="26" />
+        <state relative-caret-position="529">
+          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/Kafka2ElasticSearch.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/dstream/MappedDStream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="94" column="30" lean-forward="true" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="30" />
+        <state relative-caret-position="416">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/UDFRegistration.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/dstream/DStream.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="1072" column="128" selection-start-line="1072" selection-start-column="120" selection-end-line="1072" selection-end-column="128" />
+        <state relative-caret-position="341">
+          <caret line="936" column="8" lean-forward="true" selection-start-line="936" selection-start-column="8" selection-end-line="936" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/api/java/UDF1.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-streaming_2.11/2.4.3/spark-streaming_2.11-2.4.3-sources.jar!/org/apache/spark/streaming/DStreamGraph.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+        <state relative-caret-position="497">
+          <caret line="97" column="23" lean-forward="true" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-catalyst_2.11/2.4.3/spark-catalyst_2.11-2.4.3-sources.jar!/org/apache/spark/sql/types/ArrayType.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/wordcountStreaming.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="13" selection-start-line="13" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkStreaming/StreamingOperation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar!/org/apache/zookeeper/server/quorum/QuorumPeer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
-          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <caret line="178" column="29" selection-start-line="178" selection-start-column="29" selection-end-line="178" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-catalyst_2.11/2.4.3/spark-catalyst_2.11-2.4.3-sources.jar!/org/apache/spark/sql/types/DataTypes.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="115" column="19" lean-forward="true" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+        <state relative-caret-position="-335">
+          <caret line="698" column="29" selection-start-line="698" selection-start-column="29" selection-end-line="698" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/DataFrameWriter.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/streaming/DataStreamWriter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3743">
-          <caret line="228" selection-start-line="228" selection-end-line="228" />
+        <state relative-caret-position="6552">
+          <caret line="281" column="63" selection-start-line="281" selection-start-column="63" selection-end-line="281" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/LoadDataFromJdbc.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/streaming/StreamingQueryManager.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="8268">
+          <caret line="351" column="29" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/HiveTableTest.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/SparkSession.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1677" />
+        <state relative-caret-position="3302">
+          <caret line="169" column="80" selection-start-line="169" selection-start-column="80" selection-end-line="169" selection-end-column="80" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/DataSource.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/package.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
+        <state relative-caret-position="1950">
+          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/execution/streaming/StreamExecution.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="304" column="74" lean-forward="true" selection-start-line="304" selection-start-column="74" selection-end-line="304" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/Util/TimeUtil.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkSql/DataSource.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark3/src/main/scala/RocksDbStateStoreProvider.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="95" column="6" selection-start-line="95" selection-start-column="6" selection-end-line="95" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark3/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark3/src/main/scala/wordcount.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="76" lean-forward="true" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2106" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/StructedStreamingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2147" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/Sessionization.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/Kafka2ElasticSearch.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/HotItems.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/CountBasedWindows.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2418">
+          <caret line="96" column="10" selection-start-line="96" selection-start-column="10" selection-end-line="96" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/FileSourceTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/AggregationOperator.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/StructuredSessionization.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399" />
+        <state relative-caret-position="-3187" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/Write2EsTest.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-catalyst_2.11/2.4.3/spark-catalyst_2.11-2.4.3-sources.jar!/org/apache/spark/sql/Encoders.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+        <state relative-caret-position="583">
+          <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/WirteSeqToESArr.scala">
+    <entry file="file://$PROJECT_DIR$/spark3/src/main/java/sparksql/DealCountry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="61" column="41" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="41" />
-          <caret line="62" column="34" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="34" />
+        <state relative-caret-position="1274">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/SparkSQL2Es.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/DbSync/DataSyncTool.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="81" column="17" lean-forward="true" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        <state relative-caret-position="260">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/rdd/RDDOperationScope.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="147" column="26" lean-forward="true" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkCore/MyAverage.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="60" column="3" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/SocketWordCountTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark3/src/main/java/StructuredStreaming/wordcount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="57" column="64" lean-forward="true" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/rdd/MapPartitionsRDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/rdd/HadoopRDD.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="225" column="64" lean-forward="true" selection-start-line="225" selection-start-column="64" selection-end-line="225" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+        <state relative-caret-position="130">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DbSync/ReadFromDb.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/rdd/PairRDDFunctions.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="1482">
+          <caret line="96" column="15" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AvroDemo/IpLocaltion.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/rdd/RDD.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="22932">
+          <caret line="924" column="6" selection-start-line="924" selection-start-column="6" selection-end-line="924" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AvroDemo/IpAnalysisDemo.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/rdd/ShuffledRDD.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="379" column="2" selection-start-line="379" selection-start-column="2" selection-end-line="379" selection-end-column="2" />
+        <state relative-caret-position="107">
+          <caret line="86" column="35" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DbSync/DataSyncTool.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/StructuredStreaming/SocketWordCountTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-530">
-          <caret line="47" column="51" lean-forward="true" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="51" />
+        <state relative-caret-position="-93">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkSql/Write2EsByJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="99" column="22" lean-forward="true" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AvroDemo/TimeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/StreamingCk.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-graphx_2.11/2.4.3/spark-graphx_2.11-2.4.3.jar!/org/apache/spark/graphx/Graph.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/KafkaCreateRdd.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkCore/GraphXTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/SparkWindowOp.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="30" column="10" lean-forward="true" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/Dataset.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="1666" column="31" lean-forward="true" selection-start-line="1666" selection-start-column="31" selection-end-line="1666" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/net/ServerSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="126" column="11" selection-start-line="126" selection-start-column="11" selection-end-line="126" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewStream.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1415">
-          <caret line="107" column="65" lean-forward="true" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
+        <state relative-caret-position="163">
+          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#19#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/PageViewGenerator.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-graphx_2.11/2.4.3/spark-graphx_2.11-2.4.3-sources.jar!/org/apache/spark/graphx/Edge.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="108" column="15" lean-forward="true" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+        <state relative-caret-position="312">
+          <caret line="27" column="50" lean-forward="true" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/wordcountStreaming.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="1742">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingFromKafka.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/SparkStreaming/TimingUpdateDim.scala">
+    <entry file="file://$PROJECT_DIR$/spark2/src/main/scala/SparkCore/wordcount.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-847">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="234">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/CountBasedWindows.scala">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/util/Utils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="96" column="14" lean-forward="true" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
-          <folding>
-            <element signature="e#29#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="560">
+          <caret line="1478" column="13" lean-forward="true" selection-start-line="1478" selection-start-column="13" selection-end-line="1478" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar!/scala/collection/BitSet.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12-sources.jar!/scala/collection/mutable/BitSet.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="136" column="36" lean-forward="true" selection-start-line="136" selection-start-column="36" selection-end-line="136" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/sql/Timestamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="111" column="45" lean-forward="true" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-catalyst_2.11/2.4.3/spark-catalyst_2.11-2.4.3-sources.jar!/org/apache/spark/sql/streaming/GroupStateTimeout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/streaming/GroupState.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5200">
-          <caret line="217" column="6" selection-start-line="217" selection-start-column="6" selection-end-line="217" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/spark/spark-sql_2.11/2.4.3/spark-sql_2.11-2.4.3-sources.jar!/org/apache/spark/sql/KeyValueGroupedDataset.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="275" column="26" selection-start-line="275" selection-start-column="25" selection-end-line="275" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/Sessionization.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
-          <folding>
-            <element signature="e#29#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/MyTimeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="48" column="29" lean-forward="true" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/SocketWordCountTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-core_2.11/2.4.3/spark-core_2.11-2.4.3-sources.jar!/org/apache/spark/SparkContext.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
-          <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredSessionization.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#857#882#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructedStreamingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="110" column="3" lean-forward="true" selection-start-line="110" selection-start-column="3" selection-end-line="110" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#4000#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/StructuredStreamingTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-          <folding>
-            <element signature="e#29#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/StructuredStreaming/WordBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+          <caret line="219" column="93" lean-forward="true" selection-start-line="219" selection-start-column="93" selection-end-line="219" selection-end-column="93" />
         </state>
       </provider>
     </entry>
@@ -1067,7 +1284,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>SparkTrain</last-edited>
+          <last-edited>spark2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
